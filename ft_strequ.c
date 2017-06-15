@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/14 20:56:15 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/14 21:53:49 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/15 11:42:47 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	if (!s1 || !s2) 
+	if (!s1 || !s2)
 		return (0);
 	while (*s1 == *s2)
 	{

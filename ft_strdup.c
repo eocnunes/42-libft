@@ -6,21 +6,11 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/06 21:18:49 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/13 01:53:40 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/14 20:23:07 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-static int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include <libft.h>
 
 char	*ft_strdup(char *src)
 {

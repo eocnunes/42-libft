@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/12 13:37:32 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/13 17:24:56 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/14 20:21:47 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 	i = 0;
 	dst_str = (char *)dst;
-	src_str = (char *)src; 
+	src_str = (char *)src;
 	temp = (char *)malloc(sizeof(*temp) * n);
 	while (i < n)
 	{

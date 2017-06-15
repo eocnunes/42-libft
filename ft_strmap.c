@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/14 17:17:24 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/14 19:14:19 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/14 20:24:28 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	int 	i;
+	int		i;
 	char	*str;
 
 	i = 0;

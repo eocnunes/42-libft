@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/12 16:07:20 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/12 16:26:14 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/14 20:21:26 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == c)
-			return(str + i);
+			return (str + i);
 		i++;
 	}
 	return (0);

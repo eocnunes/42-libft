@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/12 16:30:21 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/12 16:50:58 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/14 20:20:57 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
+	size_t			i;
 	unsigned char	*str1;
 	unsigned char	*str2;
 

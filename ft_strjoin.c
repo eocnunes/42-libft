@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 13:37:32 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/18 19:00:40 by enunes           ###   ########.fr       */
+/*   Created: 2017/06/15 12:34:20 by enunes            #+#    #+#             */
+/*   Updated: 2017/06/17 23:37:35 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
+#include <libft.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int				i;
-	unsigned char	*dst_str;
-	unsigned char	*src_str;
+	int		i;
+	int		j;
+	int		s1_len;
+	int		s2_len;
+	char	*str;
 
-	i = (int)n;
-	dst_str = (unsigned char *)dst;
-	src_str = (unsigned char *)src;
-	if (src_str < dst_str)
-		while (--i > -1)
-			dst_str[i] = src_str[i];
-	else
-		while (i)
-		{
-			*dst_str++ = *src_str++;
-			i--;
-		}
-	return (dst);
+	i = 0;
+	j = 0;
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	str = (char *)malloc(sizeof(*str) * (s1_len + s2_len) + 1);
+	if (!s1 || !s2 || !str)
+		return (0);
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	while (s2[j])
+		str[i++] = s2[j++];
+	str[i] = '\0';
+	return (str);
 }

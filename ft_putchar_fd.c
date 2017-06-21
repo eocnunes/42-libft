@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 13:37:32 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/18 19:00:40 by enunes           ###   ########.fr       */
+/*   Created: 2017/06/17 23:40:17 by enunes            #+#    #+#             */
+/*   Updated: 2017/06/17 23:41:12 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
+#include <libft.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	int				i;
-	unsigned char	*dst_str;
-	unsigned char	*src_str;
-
-	i = (int)n;
-	dst_str = (unsigned char *)dst;
-	src_str = (unsigned char *)src;
-	if (src_str < dst_str)
-		while (--i > -1)
-			dst_str[i] = src_str[i];
-	else
-		while (i)
-		{
-			*dst_str++ = *src_str++;
-			i--;
-		}
-	return (dst);
+	write(fd, &c, 1);
 }

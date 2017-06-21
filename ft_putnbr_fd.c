@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 13:37:32 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/18 19:00:40 by enunes           ###   ########.fr       */
+/*   Created: 2017/06/18 00:11:31 by enunes            #+#    #+#             */
+/*   Updated: 2017/06/18 00:18:22 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
+#include <libft.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	int				i;
-	unsigned char	*dst_str;
-	unsigned char	*src_str;
-
-	i = (int)n;
-	dst_str = (unsigned char *)dst;
-	src_str = (unsigned char *)src;
-	if (src_str < dst_str)
-		while (--i > -1)
-			dst_str[i] = src_str[i];
-	else
-		while (i)
+	if (nb < 0)
+	{
+		if (nb == -2147483648)
 		{
-			*dst_str++ = *src_str++;
-			i--;
+			ft_putstr_fd("-2147483648", fd);
+			return ;
 		}
-	return (dst);
+		else
+		{
+			ft_putchar_fd('-', fd);
+			nb *= -1;
+		}
+	}
+	if (nb < 10)
+		ft_putchar_fd(nb + '0', fd);
+	else
+		{
+			ft_putnbr_fd((nb / 10), fd);
+			ft_putchar_fd(((nb % 10) + '0'), fd);
+		}
 }
+

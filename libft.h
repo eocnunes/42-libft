@@ -6,17 +6,23 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 20:06:54 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/14 19:20:45 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/19 20:15:37 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
 #include <unistd.h>
 #include <stddef.h>
 #include <string.h>
 #include <stdlib.h>
+
+typedef struct 		s_list
+{
+	void 			*content;
+	size_t 			content_size;
+	struct s_list 	*next;
+} 					t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -55,5 +61,17 @@ void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void(*f)(unsigned int, char *));
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
+void	ft_putendl(char const *s);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr(int nb);
+void	ft_putbnr_fd(int nb, int fd);
+char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
+t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstdelone(t_list **alt, void (*del)(void*, size_t));
 
 #endif

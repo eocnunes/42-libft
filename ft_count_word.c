@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/21 19:30:58 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/21 23:52:31 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/22 13:32:16 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int		ft_count_word(const char *str, char c)
 {
-
 	size_t	i;
 	size_t	num;
 

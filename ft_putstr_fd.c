@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/17 23:42:40 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/17 23:48:26 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/22 13:34:19 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char const *s, int fd)
 	int	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
 		i++;

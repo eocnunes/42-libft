@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/15 21:48:50 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/21 23:42:19 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/22 13:33:33 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char			**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	num = ft_count_word((const char *)s, c);
-	dst = (char **)malloc(sizeof(*dst) * (ft_count_word((const char *)s, c) + 1));
+	dst = (char **)malloc(sizeof(*dst) * (num + 1));
 	if (dst == 0)
 		return (0);
 	while (num--)

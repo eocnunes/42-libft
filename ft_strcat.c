@@ -6,11 +6,11 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/07 20:43:07 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/08 19:19:04 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/22 13:48:40 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char s1, const char s2)
 {
 	char *string;
 

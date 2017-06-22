@@ -6,48 +6,43 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/15 21:48:50 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/18 18:28:30 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/21 23:42:19 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-/*static int		dst_len(char const *s, char ch)
+static int		ft_len(const char *s, char c)
 {
-	int	i;
+	int		i;
 
 	i = 0;
-	while(*s)
-	{
-		if (*s != ch)
-			i++;
-		s++;
-	}
+	while (s[i] != c && s[i])
+		i++;
 	return (i);
 }
-*/
 
 char			**ft_strsplit(char const *s, char c)
 {
-	int i;
-	int j;
-	char **str_arr;
+	int		i;
+	int		num;
+	char	**dst;
 
 	i = 0;
-	str_arr = (char **)malloc(sizeof(**str_arr) * 100 + 1);
-	while(*s)
+	num = ft_count_word((const char *)s, c);
+	dst = (char **)malloc(sizeof(*dst) * (ft_count_word((const char *)s, c) + 1));
+	if (dst == 0)
+		return (0);
+	while (num--)
 	{
-		j = 0;
-		while (*s != c)
-		{
-			str_arr[i][j] = *s;
+		while (*s == c && *s)
 			s++;
-			j++;
-			if (*s == c)
-				i++;
-		}
-		while (*s == c)
-			s++;
+		dst[i] = ft_strsub((const char *)s, 0, ft_len((const char *)s, c));
+		if (dst[i] == 0)
+			return (0);
+		s = s + ft_len(s, c);
+		i++;
 	}
-	return (str_arr);
+	dst[i] = 0;
+	return (dst);
 }

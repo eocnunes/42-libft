@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/18 00:11:31 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/18 00:18:22 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/21 15:23:47 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,8 @@ void	ft_putnbr_fd(int nb, int fd)
 	if (nb < 10)
 		ft_putchar_fd(nb + '0', fd);
 	else
-		{
-			ft_putnbr_fd((nb / 10), fd);
-			ft_putchar_fd(((nb % 10) + '0'), fd);
-		}
+	{
+		ft_putnbr_fd((nb / 10), fd);
+		ft_putchar_fd(((nb % 10) + '0'), fd);
+	}
 }
-

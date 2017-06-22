@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 20:06:54 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/19 20:15:37 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/22 00:25:19 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,12 @@ char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void	ft_lstdelone(t_list **alt, void (*del)(void*, size_t));
+void	ft_lstdel(t_list **alst, void	(*del)(void*, size_t));
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+int		ft_count_word(const char *str, char c);
+size_t	ft_intlen(int num);
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif

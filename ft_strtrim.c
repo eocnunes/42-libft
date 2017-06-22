@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/15 14:00:52 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/17 23:28:08 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/21 15:27:59 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char			*ft_strtrim(char const *s)
 	char	*str;
 
 	i = 0;
-	len =  nowp_len(s);
+	len = nowp_len(s);
 	str = (char *)malloc(sizeof(*str) * len + 1);
 	if (!s || !str)
 		return (0);

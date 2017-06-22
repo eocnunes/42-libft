@@ -6,7 +6,7 @@
 #    By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/09 21:28:36 by enunes            #+#    #+#              #
-#    Updated: 2017/06/19 20:13:55 by enunes           ###   ########.fr        #
+#    Updated: 2017/06/22 00:24:11 by enunes           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,9 @@ SRCS = 	ft_atoi.c		ft_isascii.c	ft_strcat.c		ft_strcpy.c  	\
 		ft_strjoin.c	ft_strtrim.c	ft_putchar.c	ft_putstr.c		\
 		ft_putendl.c	ft_putchar_fd.c	ft_putstr_fd.c	ft_putendl_fd.c	\
 		ft_putnbr.c		ft_putnbr_fd.c	ft_strsplit.c	ft_itoa.c		\
-		ft_lstnew.c		ft_lstdelone.c	\
+		ft_lstnew.c		ft_lstdelone.c	ft_lstdel.c		ft_lstadd.c		\
+		ft_lstiter.c	ft_count_word.c	ft_intlen.c		ft_lstmap.c		\
+		\
 
 OBJS = $(SRCS:.c=.o)
 

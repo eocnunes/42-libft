@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/14 20:56:15 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/14 21:51:08 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/22 23:24:02 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,7 @@
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t i;
-
-	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while (*s1 == *s2 && i <= n)
-	{
-		if (*s1 == '\0' && *s2 == '\0')
-			return (1);
-		s1++;
-		s2++;
-		i++;
-	}
+	if (ft_strncmp(s1, s2, n) == 0)
+		return (1);
 	return (0);
 }

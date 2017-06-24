@@ -6,13 +6,13 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/10 18:07:54 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/22 13:49:23 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/22 19:47:43 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memcpy(void dst, const void src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 	char	*dststr;

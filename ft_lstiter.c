@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/20 20:39:33 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/21 15:35:45 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/23 22:02:13 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,4 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 		(*f)(lst);
 		lst = lst->next;
 	}
-	return ;
 }

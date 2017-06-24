@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 20:12:54 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/10 20:35:06 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/22 23:18:40 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,10 @@ int		ft_atoi(const char *str)
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' ||
 			str[i] == '\n' || str[i] == '\f' || str[i] == '\r')
 		i++;
-	if (str[i] == '-')
-	{
+	if (str[i] == '-' || str[i] == '+')
 		i++;
+	if (str[i - 1] == '-')
 		neg = -1;
-	}
-	if (str[i] == '+')
-		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		n = n * 10 + (str[i] - '0');

@@ -6,13 +6,13 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/07 20:43:07 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/22 13:50:01 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/22 19:48:09 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strncat(char s1, const char s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	char	*string;
 	int		i;

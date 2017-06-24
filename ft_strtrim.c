@@ -6,52 +6,36 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/15 14:00:52 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/21 15:27:59 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/23 06:42:45 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static	int		nowp_len(char const *str)
-{
-	int	i;
-
-	i = 0;
-	while (*str == ' ' || *str == '\n' || *str == '\t')
-		str++;
-	while (*str)
-	{
-		i++;
-		str++;
-	}
-	str--;
-	while (*str == ' ' || *str == '\n' || *str == '\t')
-	{
-		i--;
-		str--;
-	}
-	return (i);
-}
-
-char			*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
 	int		i;
-	int		len;
+	int		j;
 	char	*str;
 
 	i = 0;
-	len = nowp_len(s);
-	str = (char *)malloc(sizeof(*str) * len + 1);
-	if (!s || !str)
+	j = 0;
+	if (!(str = (char *)malloc(sizeof(char))))
 		return (0);
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+	if (*s == '\0' || !s)
+		return (str);
+	while (*s == ' ' || *s == '\t' || *s == '\n')
 		s++;
-	while (i < len)
-	{
-		str[i] = *s;
+	while (s[i])
 		i++;
-		s++;
+	while ((s[i - 1] == ' ' || s[i - 1] == '\t' || s[i - 1] == '\n') && i)
+		i--;
+	if ((str = ft_strnew(i)) == 0)
+		return (0);
+	while (j < i)
+	{
+		str[j] = s[j];
+		j++;
 	}
-	str[i] = '\0';
 	return (str);
 }

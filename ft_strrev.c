@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/12 16:30:21 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/22 23:23:35 by enunes           ###   ########.fr       */
+/*   Created: 2017/06/23 22:11:42 by enunes            #+#    #+#             */
+/*   Updated: 2017/06/23 23:16:43 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <libft.h>
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strrev(char *str)
 {
-	size_t			i;
-	unsigned char	*str1;
-	unsigned char	*str2;
+	int		i;
+	int		j;
+	char	temp;
 
 	i = 0;
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
-	while (i < n)
-	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
+	j = 0;
+	while (str[i])
 		i++;
+	i--;
+	while (i > j)
+	{
+		temp = str[i];
+		str[i] = str[j];
+		str[j] = temp;
+		i--;
+		j++;
 	}
-	return (0);
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 20:06:54 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/23 23:05:54 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/24 14:40:46 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void(*f)(unsigned int, char *));
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int					ft_strequ(char const *s1, char const *s2);
+int					ft_strnequ(char const *s1, char const *s2, size_t n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
@@ -70,7 +72,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int nb);
-void				ft_putbnr_fd(int nb, int fd);
+void				ft_putnbr_fd(int nb, int fd);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 t_list				*ft_lstnew(void const *content, size_t content_size);
@@ -79,6 +81,8 @@ void				ft_lstdel(t_list **alst, void	(*del)(void*, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strtrim(char const *s);
 int					ft_count_word(const char *str, char c);
 size_t				ft_intlen(int num);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));

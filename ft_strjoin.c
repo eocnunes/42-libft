@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/15 12:34:20 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/17 23:37:35 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/24 15:51:21 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
+	if (!s1 || !s2)
+		return (0);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	str = (char *)malloc(sizeof(*str) * (s1_len + s2_len) + 1);
-	if (!s1 || !s2 || !str)
+	if (!str)
 		return (0);
 	while (s1[i])
 	{

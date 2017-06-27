@@ -6,17 +6,19 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/23 22:06:44 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/23 23:15:14 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/26 17:16:09 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_swap(int *a, int *b)
+void	ft_swap(void *a, void *b, size_t s)
 {
-	int temp;
+	void	*tmp;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	tmp = malloc(s);
+	ft_memcpy(tmp, a, s);
+	ft_memcpy(a, b, s);
+	ft_memcpy(b, tmp, s);
+	free(tmp);
 }

@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/08 20:06:54 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/24 14:40:46 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/26 19:44:10 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int					ft_count_word(const char *str, char c);
 size_t				ft_intlen(int num);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_printlst(t_list **head);
-void				ft_swap(int *a, int *b);
+void				ft_swap(void *a, void *b, size_t s);
 char				*ft_strrev(char *str);
 int					ft_lstsize(t_list *lst_begin);
 

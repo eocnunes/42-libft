@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/20 18:39:03 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/20 19:01:45 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/28 16:10:13 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
 	t_list *lst;
 
 	lst = *alst;
-	while (lst != 0)
+	while (lst)
 	{
 		tmp = lst->next;
-		del(lst, lst->content_size);
+		del(lst->content, lst->content_size);
+		free(lst);
 		lst = tmp;
 	}
-	free(tmp);
 	*alst = 0;
 }

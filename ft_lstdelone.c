@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/19 19:57:45 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/19 20:13:00 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/28 16:20:12 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	del((*alst)->content, (*alst)->content_size);
-	free(*alst);
+	t_list	*lst;
+
+	lst = *alst;
+	del(lst->content, lst->content_size);
+	free(lst);
 	*alst = 0;
 }

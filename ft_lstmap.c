@@ -6,7 +6,7 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/20 20:44:31 by enunes            #+#    #+#             */
-/*   Updated: 2017/06/22 00:23:14 by enunes           ###   ########.fr       */
+/*   Updated: 2017/06/28 16:30:29 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list		*new;
-	t_list		*list;
+	t_list		*f_lst;
 
 	if (!lst)
 		return (0);
-	list = f(lst);
-	new = list;
+	f_lst = f(lst);
+	new = f_lst;
 	while (lst->next)
 	{
 		lst = lst->next;
-		if (!(list->next = f(lst)))
+		if (!(f_lst->next = f(lst)))
 		{
-			free(list->next);
+			free(f_lst->next);
 			return (0);
 		}
-		list = list->next;
+		f_lst = f_lst->next;
 	}
 	return (new);
 }

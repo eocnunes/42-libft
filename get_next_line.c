@@ -6,13 +6,13 @@
 /*   By: enunes <eocnunes@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/30 00:59:20 by enunes            #+#    #+#             */
-/*   Updated: 2017/10/07 20:56:26 by enunes           ###   ########.fr       */
+/*   Updated: 2017/11/18 21:43:54 by enunes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			**set_line(char **rest, char **line)
+static char			**set_line(char **rest, char **line)
 {
 	int		i;
 
@@ -23,7 +23,7 @@ char			**set_line(char **rest, char **line)
 	return (rest);
 }
 
-void			fill(char **over)
+static void			fill(char **over)
 {
 	char	*endl;
 	char	*temp;
@@ -42,7 +42,7 @@ void			fill(char **over)
 	}
 }
 
-int				get_next_line(const int fd, char **line)
+int					get_next_line(const int fd, char **line)
 {
 	int				ret;
 	char			buf[BUFF_SIZE + 1];
